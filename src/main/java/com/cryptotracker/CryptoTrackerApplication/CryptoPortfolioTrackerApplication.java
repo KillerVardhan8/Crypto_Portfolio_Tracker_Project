@@ -12,9 +12,5 @@ public class CryptoPortfolioTrackerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CryptoPortfolioTrackerApplication.class, args);
 	}
-	  @Bean
-	    public PasswordEncoder passwordEncoder() {
-	        return new BCryptPasswordEncoder();
-	    }
 
 }
