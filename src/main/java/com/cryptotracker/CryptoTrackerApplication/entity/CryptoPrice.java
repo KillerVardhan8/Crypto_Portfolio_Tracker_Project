@@ -4,19 +4,16 @@ import java.time.LocalDateTime;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-//Entity is used to mark this class as a database table
 
 @Entity
 public class CryptoPrice {
 	
-	//This annotation is used to specify the primary key
 	
 	@Id
 	private String symbol;
 	private double price;
 	private LocalDateTime timestamp;
-	
-	//Getters and setters are used to access variables
+
 	
 	public String getSymbol() {
 		return symbol;
@@ -38,20 +35,20 @@ public class CryptoPrice {
 	public void setTimestamp(LocalDateTime timestamp) {
 		this.timestamp = timestamp;
 	}
-	
-	/*Creating a Default Constructor allows JPA to create object by itself when
-	 * loading data from the database*/
+
 	
 	public CryptoPrice() {
 		
 	}
 	
-	//Creating Constructor for generating objects
 	
 	public CryptoPrice(String symbol, double price, LocalDateTime timestamp) {
 		this.symbol = symbol;
 		this.price = price;
 		this.timestamp = timestamp;
+		
+		/*CryptoPrice is a JPA Entity representing the prices of a crypto currency. 
+		 * It contains the symbol(Primary key), current price and timestamp of the last update. */
 	}
 	
 }

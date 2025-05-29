@@ -11,3 +11,5 @@ public interface CryptoPriceService {
 	public CryptoPrice getPrice(String symbol);
 
 }
+
+//This interface includs three methods to simualte prices, fetching all prices and getting price by symbol

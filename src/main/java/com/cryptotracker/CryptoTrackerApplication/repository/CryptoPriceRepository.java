@@ -9,3 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface CryptoPriceRepository extends JpaRepository<CryptoPrice, String> {
 
 }
+
+//This interface extends the JpaRepository to inherit the built in CURD operations
